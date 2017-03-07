@@ -2,7 +2,7 @@ package com.epam.mentoring.patterns.creational.singleton;
 
 public class ThreadSafeDoubleCheckSingleton implements Singleton {
 
-	private static ThreadSafeDoubleCheckSingleton instance;
+	private static volatile ThreadSafeDoubleCheckSingleton instance;
 
 	private ThreadSafeDoubleCheckSingleton() {
 	}
