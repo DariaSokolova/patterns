@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Prototype</title>
+</head>
+<body>
+	<h1>Prototype</h1>
+	<h2>Description</h2>
+	Specifies the kinds of objects to create using a prototypical instance, and create new objects by copying this prototype.<br>
+	Should be used when a system should be independent of how its products are created, composed, and represented; 
+	to avoid building a class hierarchy of factories that parallels the class hierarchy of products; 
+	when instances of a class can have one of only a few different combinations of state. 
+
+	<h4>Using in java API: </h4>
+	<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--">java.text.Format#clone()</a><br>
+	<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--">java.util.Date#clone()</a><br>
+	
+
+	<h3>Pros:</h3>
+	<ul>
+	<li>Hides the concrete product classes from the client.</li>
+	<li>Specifying new objects by varying values and structure.</li>
+	<li>Reduces subclassing.</li>
+	<li>Let a client work with application-specific classes without modification.</li>
+	</ul>
+	
+	<h3>Cons:</h3>
+	<ul>
+	<li>Classes that have circular references can be difficult to deep clone.</li>
+	</ul>
+</body>
+</html>

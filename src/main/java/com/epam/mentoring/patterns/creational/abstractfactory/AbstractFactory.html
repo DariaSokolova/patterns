@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Abstract Factory</title>
+</head>
+<body>
+	<h1>Abstract Factory</h1>
+	<h2>Description</h2>
+	Provides an interface for creating families of related or dependent objects without specifying their concrete classes.<br>
+	Should be used when a system should be independent of how its products are created, composed, and represented;
+	a system should be configured with one of multiple families of products;
+	a family of related product objects is designed to be used together, and you need to enforce this constraint;
+	there is a need to provide a class library of products and to reveal just their interfaces, not their implementations.
+
+	<h4>Using in java API: </h4>
+	<a href="http://docs.oracle.com/javase/8/docs/api/javax/xml/parsers/DocumentBuilderFactory.html#newInstance--">javax.xml.parsers.DocumentBuilderFactory#newInstance()</a><br>
+	<a href="http://docs.oracle.com/javase/8/docs/api/java/sql/DriverManager.html#getConnection-java.lang.String-">java.sql.DriverManager#getConnection()</a><br>
+	
+	<h3>Pros:</h3>
+	<ul>
+	<li>Isolates concrete classes and helps control the classes of objects that an application creates. 
+	A factory encapsulates the responsibility and the process of creating product objects, it isolates clients from implementation classes. 
+	Clients manipulate instances through their abstract interfaces. Product class names are isolated in the implementation of the concrete factory; 
+	they do not appear in client code.</li>
+	<li>Makes exchanging product families easy. The class of a concrete factory appears only once in an application — where it's instantiated. 
+	This makes it easy to change the concrete factory an application uses. It can use different product configurations simply by changing the concrete factory. 
+	Because an abstract factory creates a complete family of products, the whole product family changes at once.</li>
+	<li>Promotes consistency among products. When product objects in a family are designed to work together, it's important that an application use
+	objects from only one family at a time. AbstractFactory makes this easy to enforce.</li>
+	</ul>
+	
+	<h3>Cons:</h3>
+	<ul>
+	<li>Supporting new kinds of products is difficult. It requires extending the factory interface, which involves changing the AbstractFactory class and 
+	all of its subclasses</li>
+	</ul>
+
+</body>
+</html>

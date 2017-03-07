@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Proxy</title>
+</head>
+<body>
+	<h1>Proxy</h1>
+	<h2>Description</h2>
+	Provides a surrogate or placeholder for another object to control access to it.<br>
+	Should be used where there is a need to have a a local representative for an object in a different address space;
+	to create expensive objects on demand; to control access to the original object; 
+	to have a replacement for a bare reference that performs additional actions when an object is accessed.
+
+	<h4>Using in java API: </h4>
+	<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/SecurityManager.html#checkPermission-java.security.Permission-">java.lang.SecurityManager</a><br>
+	<a href="http://docs.oracle.com/javase/8/docs/api/java/io/InputStreamReader.html#getEncoding--">java.io.InputStreamReader</a><br>
+	
+
+	<h3>Pros:</h3>
+	<ul>
+		<li>Can perform optimizations such as creating an object on demand.</li>
+		<li>Can provide security checks.</li>
+		<li>Allows additional tasks when an object is accessed.</li>
+	</ul>
+	
+	<h3>Cons:</h3>
+	<ul>
+		<li>Can hide the fact that an object resides in a different address space.</li>
+		<li>Less efficiency due to indirection.</li>
+	</ul>
+</body>
+</html>

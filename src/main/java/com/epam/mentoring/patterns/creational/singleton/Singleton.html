@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Singleton</title>
+</head>
+<body>
+	<h1>Singleton</h1>
+	<h2>Description</h2>
+	Ensures that a class only has one instance, and provide a global point of access to it.<br>
+	Should be used when there must be exactly one instance of a class, and it must be accessible to clients from a well-known access point; 
+	when the sole instance should be extensible by subclassing, and clients should be able to use an extended instance without modifying their 
+	code.
+	
+	<h4>Using in java API: </h4>
+	<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Runtime.html#getRuntime--">java.lang.Runtime#getRuntime()</a><br>
+	<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/System.html#console--">java.lang.System#console()</a>
+	
+	<h3>Pros:</h3>
+	<ul>
+	<li>Controlled access to sole instance.</li>
+	<li>Reduced name space as it is an improvement over global variables.</li>
+	<li>Permits a variable number of instances.</li>
+	</ul>
+
+
+	<h3>Cons:</h3>
+	<ul>
+	<li>Generally violates the single responsibility principle: they control their own creation and lifecycle (but it can be delegated to another class).</li>
+	<li>Limit the flexibility of the program: the singleton constructor can't accept any parameters.</li>
+	</ul>
+</body>
+</html>

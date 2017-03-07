@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Adapter</title>
+</head>
+<body>
+	<h1>Adapter</h1>
+	<h2>Description</h2>
+	Converts the interface of a class into another interface clients expect. Lets classes work together that couldn't otherwise because of 
+	incompatible interfaces. <br>
+	Should be used when there is a need to use an existing class, and its interface does not match the one needed; 
+	to create a reusable class that cooperates with unrelated or unforeseen classes;
+	there is a need to use several existing subclasses, but it's impractical to adapt their interface by subclassing every one. An object
+	adapter can adapt the interface of its parent class.
+	
+	<h4>Using in java API: </h4>
+	<a href="http://docs.oracle.com/javase/8/docs/api/java/io/OutputStreamWriter.html#OutputStreamWriter-java.io.OutputStream-">java.io.OutputStreamWriter(OutputStream out)</a><br>
+	<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html#list-java.util.Enumeration-">java.util.Collections#list()</a><br>
+
+	<h3>Pros:</h3>
+	<ul>	
+		<li>Helps achieve reusability and flexibility.</li>
+		<li>Can interconnects two incompatible interfaces.</li>
+		<li>Allows to use new APIs (with different interfaces) and to not break existing implementations.</li>
+	</ul>
+	
+	<h3>Cons:</h3>
+	<ul>
+		<li>Aren't transparent to all clients (can be fixed by using two-way adapters).</li>
+		<li>All requests are forwarded.</li>
+		<li>Some number of adaptations may be needed on an adapter chain to reach the type which is required.</li>
+	</ul>
+</body>
+</html>

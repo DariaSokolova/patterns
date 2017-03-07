@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Flyweight</title>
+</head>
+<body>
+	<h1>Flyweight</h1>
+	<h2>Description</h2>
+	Uses sharing to support large numbers of fine-grained objects efficiently.<br>
+	Should be used when an application uses a large number of objects; storage costs are high because of the sheer quantity of objects;
+	most object state can be made extrinsic; many groups of objects may be replaced by relatively few shared objects once extrinsic state is removed;
+	the application doesn't depend on object identity.
+
+	<h4>Using in java API: </h4>
+	<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html#valueOf-int-">java.lang.Integer#valueOf(int)</a><br>
+	<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html#intern--">java.lang.String.intern()</a><br>
+	
+
+	<h3>Pros:</h3>
+	<ul>
+		<li>Reduces the amount of memory used.</li>
+		<li>Reduces the number of objects.</li>
+	</ul>
+	
+	<h3>Cons:</h3>
+	<ul>
+		<li>Time costs on object transferring and finding.</li>
+	</ul>
+</body>
+</html>

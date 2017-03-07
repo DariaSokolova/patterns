@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Factory Method</title>
+</head>
+<body>
+	<h1>Factory Method</h1>
+	<h2>Description</h2>
+	Defines an interface for creating an object, but let subclasses decide which class to instantiate.<br>
+	Should be used when a class can't anticipate the class of objects it must create; 
+	a class wants its subclasses to specify the objects it creates;
+	classes delegate responsibility to one of several helper subclasses, and there is a need to localize the knowledge of which helper subclass is the delegate.
+
+	<h4>Using in java API: </h4>
+	<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Array.html#newInstance-java.lang.Class-int-">java.lang.reflect.Array#newInstance()</a><br>
+	<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Calendar.html#getInstance-java.util.Locale-">java.util.Calendar#getInstance()</a>
+	
+	<h3>Pros:</h3>
+	<ul>
+	<li>The code only deals with the product interfaces; therefore, it can work with any user-defined concrete product classes.</li>
+	<li>Provides hooks for subclasses. Creating objects inside a class with a factory method is always more flexible than creating an object directly.</li>
+	<li>Connects parallel class hierarchies.</li>
+	</ul>
+
+
+	<h3>Cons:</h3>
+	<ul>
+	<li>Might have to create subclass of product creator for an each new type of product.</li>
+	</ul>
+
+</body>
+</html>

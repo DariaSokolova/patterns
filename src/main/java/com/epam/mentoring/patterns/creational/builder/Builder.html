@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Builder</title>
+</head>
+<body>
+	<h1>Builder</h1>
+	<h2>Description:</h2>
+	Separates the construction of a complex object from its representation so that the same construction process can create different representations.<br>
+	Should be used when the algorithm for creating a complex object should be independent of the parts that make up the object and how they're assembled;
+	the construction process must allow different representations for the object that's constructed.
+	
+	<h4>Using in java API: </h4>
+	<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html#append-boolean-">java.lang.StringBuilder#append</a><br>
+	<a href="http://docs.oracle.com/javase/8/docs/api/java/io/PrintStream.html#printf-java.util.Locale-java.lang.String-java.lang.Object...-">java.io.PrintStream#printf</a><br>
+	
+	<h3>Pros:</h3>
+	<ul>
+	<li>Lets vary a product's internal representation. The Builder object provides the director with an abstract interface for constructing the product. 
+	The interface lets the builder hide the representation and internal structure of the product. </li>
+	<li>Hides how the product gets assembled. Because the product is constructed through an abstract interface, all you have to do to change 
+	the product's internal representation is define a new kind of builder.</li>
+	<li>Isolates code for construction and representation. The Builder pattern improves modularity by encapsulating the way a complex object is
+	constructed and represented. Clients needn't know anything about the classes that define the product's internal structure; such classes don't appear 
+	in Builder's interface.</li>
+	<li>Gives a finer control over the construction process. The Builder pattern constructs the product step by step under the director's control. 
+	Only when the product is finished does the director retrieve it from the builder. Hence the Builder interface reflects the process of constructing the 
+	product more than other creational patterns.</li>
+	</ul>
+	
+	<h3>Cons:</h3>
+	<ul>
+	<li>Requires creating a separate ConcreteBuilder for each different type of Product.</li>
+	</ul>
+</body>
+</html>
