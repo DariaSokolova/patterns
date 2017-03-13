@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Chain of Responsibility</title>
+</head>
+<body>
+	<h1>Chain of Responsibility</h1>
+	<h2>Description</h2>
+	Avoids coupling the sender of a request to its receiver by giving more than one object a chance to handle the request. Chain the receiving objects and 
+	pass the request along the chain until an object handles it.<br>
+	Should be used when more than one object may handle a request, and the handler isn't known a priori. The handler should be ascertained automatically;
+	there is a need to issue a request to one of several objects without specifying the receiver explicitly; 
+	the set of objects that can handle a request should be specified dynamically.
+
+	<h4>Using in java API: </h4>
+	<a href="https://docs.oracle.com/javase/8/docs/api/java/util/logging/Logger.html#log-java.util.logging.Level-java.lang.String-">java.util.logging.Logger#log()</a><br>
+	<a href="https://tomcat.apache.org/tomcat-5.5-doc/servletapi/javax/servlet/Filter.html#doFilter(javax.servlet.ServletRequest, javax.servlet.ServletResponse, javax.servlet.FilterChain)">javax.servlet.Filter#doFilter()</a>
+	
+	<h3>Pros:</h3>
+	<ul>
+	<li>Reduces coupling.</li>
+	<li>Adds flexibility in assigning responsibilities to objects.</li>
+	<li>State objects can be shared.</li>
+	</ul>
+
+
+	<h3>Cons:</h3>
+	<ul>
+	<li>Receipt isn't guaranteed.</li>
+	</ul>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Mediator</title>
+</head>
+<body>
+	<h1>Mediator</h1>
+	<h2>Description</h2>
+	Defines an object that encapsulates how a set of objects interact. Mediator promotes loose coupling by keeping objects from referring to each other explicitly, and
+	it lets to vary their interaction independently.<br>
+	Should be used when a set of objects communicate in well-defined but complex ways; reusing an object is difficult because it refers to and communicates with
+	many other objects; a behavior that's distributed between several classes should be customizable without a lot of subclassing.
+
+	<h4>Using in java API: </h4>
+	<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Timer.html#schedule-java.util.TimerTask-java.util.Date-">java.util.Timer#schedule()</a><br>
+	<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Method.html#invoke-java.lang.Object-java.lang.Object...-">java.lang.reflect.Method#invoke()</a>
+	
+	<h3>Pros:</h3>
+	<ul>
+	<li>Decouples colleagues.</li>
+	<li>Simplifies object protocols.</li>
+	<li>Abstracts how objects cooperate.</li>
+	</ul>
+
+
+	<h3>Cons:</h3>
+	<ul>
+	<li>Limits subclassing.</li>
+	<li>Centralizes control and this can make the mediator itself a monolith that's hard to maintain..</li>
+	</ul>
+
+</body>
+</html>

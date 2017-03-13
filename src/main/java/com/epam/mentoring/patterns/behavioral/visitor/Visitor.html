@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Visitor</title>
+</head>
+<body>
+	<h1>Visitor</h1>
+	<h2>Description</h2>
+	Represents an operation to be performed on the elements of an object structure. Visitor lets you define a new operation without changing 
+	the classes of the elements on which it operates.<br>
+	Should be used when an object structure contains many classes of objects with differing interfaces, and there is a need 
+	to perform operations on these objects that depend on their concrete classes;
+	many distinct and unrelated operations need to be performed on objects in an object structure, and you want to avoid "polluting" 
+	their classes with these operations;
+	the classes defining the object structure rarely change, but you often want to define new operations over the structure.
+
+	<h4>Using in java API: </h4>
+	<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Array.html#newInstance-java.lang.Class-int-">java.lang.reflect.Array#newInstance()</a><br>
+	<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Calendar.html#getInstance-java.util.Locale-">java.util.Calendar#getInstance()</a>
+	
+	<h3>Pros:</h3>
+	<ul>
+	<li>Makes adding new operations easy.</li>
+	<li>Gathers related operations and separates unrelated ones.</li>
+	<li>Accumulating state.</li>
+	</ul>
+
+
+	<h3>Cons:</h3>
+	<ul>
+	<li>Adding new ConcreteElement classes is hard.</li>
+	<li>Difficulties in visiting across class hierarchies.</li>
+	<li>Breaking encapsulation.</li>
+	</ul>
+
+</body>
+</html>

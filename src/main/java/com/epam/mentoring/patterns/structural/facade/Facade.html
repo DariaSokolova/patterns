@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Facade</title>
+</head>
+<body>
+	<h1>Facade</h1>
+	<h2>Description</h2>
+	Provides a unified interface to a set of interfaces in a subsystem. Facade defines a higher-level interface that makes the subsystem easier to use.<br>
+	Should be used when there is a need to provide a simple interface to a complex subsystem; 
+	there are many dependencies between clients and the implementation classes of an abstraction;
+	there is a need to layer your subsystems. 
+
+	<h4>Using in java API: </h4>
+	Probably: <br>
+	javax.servlet.http.HttpSession<br>
+	javax.servlet.http.HttpServletRequest
+	
+
+	<h3>Pros:</h3>
+	<ul>
+		<li>Shields clients from subsystem components, thereby reducing the number of objects that clients deal with and making the subsystem easier to use.</li>
+		<li>Promotes weak coupling between the subsystem and its clients.</li>
+		<li>Doesn't prevent applications from using subsystem classes if they need to.</li>
+	</ul>
+	
+	<h3>Cons:</h3>
+	<ul>
+		<li>Subsystem methods are connected to the Facade layer. If the structure of the subsystem changes then it will require subsequent change to the Façade layer 
+		and client methods.</li>
+	</ul>
+</body>
+</html>

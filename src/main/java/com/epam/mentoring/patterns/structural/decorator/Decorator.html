@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Decorator</title>
+</head>
+<body>
+	<h1>Decorator</h1>
+	<h2>Description</h2>
+	Attaches additional responsibilities to an object dynamically. Decorators provide a flexible alternative to subclassing for extending functionality.<br>
+	Should be used to add responsibilities to individual objects dynamically and transparently, that is, without affecting other objects;
+	for responsibilities that can be withdrawn;	when extension by subclassing is impractical.
+	<h4>Using in java API: </h4>
+	<a href="http://docs.oracle.com/javaee/8/docs/api/javax/servlet/http/HttpServletRequestWrapper.html">javax.servlet.http.HttpServletRequestWrapper</a><br>
+	<a href="http://docs.oracle.com/javaee/8/docs/api/javax/servlet/http/HttpServletResponseWrapper.html">javax.servlet.http.HttpServletResponseWrapper</a><br>
+
+	<h3>Pros:</h3>
+	<ul>
+		<li>Has more flexibility than inheritance.</li>
+		<li>Avoids feature-laden classes high up in the hierarchy.</li>
+	</ul>
+	
+	<h3>Cons:</h3>
+	<ul>
+		<li>A decorator and its component aren't identical.</li>
+		<li>Lots of little objects.</li>
+	</ul>
+</body>
+</html>

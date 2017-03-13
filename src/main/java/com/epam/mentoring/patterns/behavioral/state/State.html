@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>State</title>
+</head>
+<body>
+	<h1>State</h1>
+	<h2>Description</h2>
+	Allows an object to alter its behavior when its internal state changes. The object will appear to change its class.<br>
+	Should be used when an object's behavior depends on its state, and it must change its behavior at run-time depending on that state;
+	operations have large, multipart conditional statements that depend on the object's state. 
+
+	<h4>Using in java API: </h4>
+	<a href="http://docs.oracle.com/javaee/7/api/javax/faces/lifecycle/Lifecycle.html#execute-javax.faces.context.FacesContext-">javax.faces.lifecycle.LifeCycle#execute()</a><br>
+
+	
+	<h3>Pros:</h3>
+	<ul>
+	<li>Localizes state-specific behavior and partitions behavior for different states.</li>
+	<li>Makes state transitions explicit.</li>
+	<li>State objects can be shared.</li>
+	</ul>
+
+
+	<h3>Cons:</h3>
+	<ul>
+	<li>Even for simple state machines a large number of classes need to be implemented.</li>
+	<li>The state interface as defined in the pattern is expensive to maintain when a new event is introduced.</li>
+	</ul>
+
+</body>
+</html>

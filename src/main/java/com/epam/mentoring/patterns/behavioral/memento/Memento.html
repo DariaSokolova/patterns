@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Memento</title>
+</head>
+<body>
+	<h1>Memento</h1>
+	<h2>Description</h2>
+	Without violating encapsulation, capture and externalize an object'sinternal state so that the object can be restored to this state later.<br>
+	Should be used when a snapshot of (some portion of) an object's state must be saved so that it can be restored to that state late;
+	a direct interface to obtaining the state would expose implementation details and break the object's encapsulation.
+
+	<h4>Using in java API: </h4>
+	<a href="http://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html">java.io.Serializable (implementations)</a><br>
+	<a href="http://docs.oracle.com/javaee/7/api/javax/faces/component/StateHolder.html">javax.faces.component.StateHolder (implementations)</a>
+	
+	<h3>Pros:</h3>
+	<ul>
+	<li>Preserving encapsulation boundaries.</li>
+	<li>Simplifies Originator.</li>
+	</ul>
+
+
+	<h3>Cons:</h3>
+	<ul>
+	<li>Using mementos might be expensive.</li>
+	<li>Hidden costs in caring for mementos.</li>
+	</ul>
+
+</body>
+</html>

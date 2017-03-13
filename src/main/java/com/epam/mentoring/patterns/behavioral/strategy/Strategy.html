@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Interpreter</title>
+</head>
+<body>
+	<h1>Interpreter</h1>
+	<h2>Description</h2>
+	Defines a family of algorithms, encapsulate each one, and make them interchangeable. Strategy lets the algorithm vary independently from
+	clients that use it.<br>
+	Should be used when many related classes differ only in their behavior; there is a need in different variants of an algorithm; 
+	an algorithm uses data that clients shouldn't know about; a class defines many behaviors, and these appear as multiple conditional
+	statements in its operations.
+
+	<h4>Using in java API: </h4>
+	<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html#sort-java.util.List-java.util.Comparator-">java.util.Collection#sort(List, Comparator)</a><br>
+	<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html#parallelSort-T:A-java.util.Comparator-">java.util.Arrays#sort(T[], Comparator)</a>
+	
+	<h3>Pros:</h3>
+	<ul>
+	<li>Defines families of related algorithms for contexts to reuse.</li>
+	<li>An alternative to subclassing.</li>
+	<li>Eliminate conditional statements.</li>
+	<li>Can provide different implementations of the same behavior.</li>
+	</ul>
+
+
+	<h3>Cons:</h3>
+	<ul>
+	<li>Clients must be aware of different Strategies.</li>
+	<li>Communication overhead between Strategy and Context.</li>
+	<li>Increased number of objects.</li>
+	</ul>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Composite</title>
+</head>
+<body>
+	<h1>Composite</h1>
+	<h2>Description</h2>
+	Composes objects into tree structures to represent part-whole hierarchies. Composite lets clients treat individual objects and compositions of objects uniformly.<br>
+	Should be used there is a need to represent part-whole hierarchies of objects; 
+	clients should be able to ignore the difference between compositions of objects and individual objects.
+
+	<h4>Using in java API: </h4>
+	<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Map.html#putAll-java.util.Map-">java.util.Map#putAll(Map)</a><br>
+	<a href="http://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html">java.nio.ByteBuffer#put(ByteBuffer)</a><br>
+	
+	<h3>Pros:</h3>
+	<ul>
+		<li>Primitive objects can be composed into more complex objects, which in turn can be composed, and so on recursively. Wherever client code expects
+		a primitive object, it can also take a composite object.</li>
+		<li>Makes the client simple.</li>
+		<li>Makes it easier to add new kinds of components.</li>
+	</ul>
+	
+	<h3>Cons:</h3>
+	<ul>
+		<li>Can make a design overly general.</li>
+	</ul>
+</body>
+</html>

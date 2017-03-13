@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Template Method</title>
+</head>
+<body>
+	<h1>Template Method</h1>
+	<h2>Description</h2>
+	Encapsulates a request as an object, thereby letting you parameterize clients with different requests, queue or log requests, and 
+	support undoable operations.<br>
+	Should be used to parameterize objects by an action to perform; specify, queue, and execute requests at different times; support undo;
+	support logging changes so that they can be reapplied in case of a system crash; structure a system around high-level operations built 
+	on primitives operations.
+
+	<h4>Using in java API: </h4>
+	<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html">java.lang.Runnable (implementations)</a><br>
+	<a href="http://docs.oracle.com/javase/8/docs/api/javax/swing/Action.html">javax.swing.Action (implementations)</a><br>
+	
+	<h3>Pros:</h3>
+	<ul>
+	<li>Decouples the object that invokes the operation from the one that knows how to perform it.</li>
+	<li>Commands are first-class objects. They can be manipulated and extended like any other object.</li>
+	<li>Commands can be assembled into a composite command.</li>
+	<li>It's easy to add new Commands, because there is no need to change existing classes.</li>
+	</ul>
+
+
+	<h3>Cons:</h3>
+	<ul>
+		<li>Forcing a lot of Command classes that can make a design look cluttered.</li>
+	</ul>
+
+</body>
+</html>

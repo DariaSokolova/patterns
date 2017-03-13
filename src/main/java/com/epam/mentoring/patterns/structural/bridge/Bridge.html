@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Bridge</title>
+</head>
+<body>
+	<h1>Bridge</h1>
+	<h2>Description</h2>
+	Decouples an abstraction from its implementation so that the two can vary independently.<br>
+	Should be used where there is a need to avoid a permanent binding between an abstraction and its implementation; both the abstractions and their 
+	implementations should be extensible by subclassing; changes in the implementation of an abstraction should have no impact on clients; 
+	to share an implementation among multiple objects, and this fact should be hidden from the client.
+
+	<h4>Using in java API: </h4>
+	JDBC API<br>
+	<a href="https://docs.oracle.com/javase/7/docs/api/java/awt/package-summary.html">AWT API</a><br>
+	
+
+	<h3>Pros:</h3>
+	<ul>
+		<li>Decoupling interface and implementation.</li>
+		<li>Improves extensibility.</li>
+		<li>Hiding implementation details from clients.</li>
+	</ul>
+	
+	<h3>Cons:</h3>
+	<ul>
+		<li>Increases complexity.</li>
+		<li>Double indirection - impact on performance.</li>
+	</ul>
+</body>
+</html>
